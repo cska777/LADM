@@ -1,0 +1,106 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+	Adhésion
+{% endblock %}
+
+{% block body %}
+
+	<section id="sectionImg">
+		<div>
+			<h1>Lorem ipsum dolor sit</h1>
+			<p id="textSectionImg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non accusamus harum, facere libero suscipit accusantium nemo rem a inventore esse.</p>
+		</div>
+	</section>
+
+	<section id="nosAdherents">
+		<h2>Nos Adhérents</h2>
+		<p id="p1Adh">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde aperiam assumenda eius, veritatis modi quas earum, cupiditate non eveniet eum nisi facilis voluptate corporis accusamus eos molestias. Eaque ipsa tenetur delectus et, eius fugiat nesciunt.</p>
+	</section>
+
+	<section id="sectionAdh">
+		<div id="adherentSimple">
+			<div id="headerAdhSimple" class="px-5">
+				<i class="fa-regular fa-user"></i>
+				<h3>Adhérent Simple</h3>
+				<p>9.000 frcfa par an</p>
+			</div>
+			<div id="textAdhSimple" class="px-5">
+				<p id="text1" class="px-5 py-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam explicabo saepe vitae officia enim iusto ipsam vero odit voluptate libero, culpa non accusantium quam perferendis minima molestias ipsum mollitia amet exercitationem commodi. Sed ratione harum id vel exercitationem ducimus tenetur odio accusamus, laboriosam temporibus quaerat sapiente nulla rem fugit repudiandae!</p>
+				<p id="text2" class="px-5 py-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas accusamus nisi quisquam reprehenderit doloribus a eius? Voluptas eius voluptatibus, corrupti at impedit corporis asperiores sint eveniet unde ut eaque enim tempora dolorem est voluptatem, doloremque ipsa consequatur magnam esse voluptate dignissimos necessitatibus aliquid totam tempore. Ut sint voluptas tempore nihil!</p>
+			</div>
+		</div>
+
+		<div id="adherentCadre">
+			<div id="headerAdhCadre" class="px-5">
+				<i class="fa-regular fa-user"></i>
+				<h3>Adhérent Cadre</h3>
+				<p>50.000 frcfa par an</p>
+			</div>
+			<div id="textAdhCadre" class="px-5">
+				<p id="text1" class="px-5 py-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam explicabo saepe vitae officia enim iusto ipsam vero odit voluptate libero, culpa non accusantium quam perferendis minima molestias ipsum mollitia amet exercitationem commodi. Sed ratione harum id vel exercitationem ducimus tenetur odio accusamus, laboriosam temporibus quaerat sapiente nulla rem fugit repudiandae!</p>
+				<p id="text2" class="px-5 py-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas accusamus nisi quisquam reprehenderit doloribus a eius? Voluptas eius voluptatibus, corrupti at impedit corporis asperiores sint eveniet unde ut eaque enim tempora dolorem est voluptatem, doloremque ipsa consequatur magnam esse voluptate dignissimos necessitatibus aliquid totam tempore. Ut sint voluptas tempore nihil!</p>
+			</div>
+		</div>
+	</section>
+
+	<section id="sectionBtn" class="d-flex justify-content-between">
+		<div class="divBtnAdh">
+			<button id="simpleBtn" class="btnCotisation checkedCotisation adhSimple">Adhérent simple</button>
+			<button id="cadreBtn" class="btnCotisation adhCadre">Adhérent cadre</button>
+		</div>
+		<div class="divBtnZone">
+			<button id="afriqueBtn" class="btnCotisation checkedCotisation zoneAfrique">Zone Afrique</button>
+			<button id="europeBtn" class="btnCotisation zoneEurope">Zone Europe</button>
+		</div>
+	</section>
+
+	<section class="d-flex justify-content-center sectionPrincipaleAdhPrix">
+		<div id="adhPrixDiv" class="mb-5">
+			<p>Le prix de la cotisation annuelle s'élève à
+				<span></span>
+			</p>
+		</div>
+	</section>
+
+	<section id="sectionAdhesion">
+		<h2>Adhésion</h2>
+		<div id="divForms">
+			<div id="persPhysique">
+				<div id="formPersPhy">
+					{{ form_start(form) }}
+					Plan<br>
+					{{ form_row(form.plan) }}
+					{{ form_row(form.type) }}
+					<div class="d-flex civiliteSelectDiv" style="">
+						<div class='w-25'>
+							{{ form_row(form.civilite) }}
+						</div>
+						<div class='pr w-100'>
+							{{ form_row(form.prenom) }}
+						</div>
+					</div>
+					<div class="d-flex civiliteSelectDiv" style="">
+						<div class='w-75'>
+							{{ form_row(form.siren) }}
+						</div>
+						<div class='fj w-100'>
+							{{ form_row(form.formeJuridique) }}
+						</div>
+					</div>
+					{{ form_row(form.nom) }}
+					{{ form_row(form.email) }}
+					{{ form_row(form.telephone) }}
+					{{ form_row(form.adresse) }}
+					{{ form_row(form.complementAdresse) }}
+					{{ form_row(form.codePostal) }}
+					{{ form_row(form.ville) }}
+					{{ form_row(form.pays) }}
+					{{ form_row(form.password) }}
+					<button type="submit" class="btn btn-primary" id="registerBtn">S'inscrire</button>
+					{{ form_end(form) }}
+				</div>
+			</div>
+		</div>
+	</section>
+
+{% endblock %}

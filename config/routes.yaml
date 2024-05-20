@@ -1,0 +1,24 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+    
+    
+show_article:
+    path: '/article/{id}'
+    controller: 'App\Controller\ArticleController::show'
+    methods: ['GET']
+
+
+app_create_checkout_session:
+    methods: ['POST']
+    path: /create-checkout-session
+    controller: App\Controller\PaiementAdhesionController::createCheckoutSession
+
+    
+# config/routes.yaml
+not_found:
+    path: /{url}
+    controller: App\Controller\ErrorController::notFound
+    

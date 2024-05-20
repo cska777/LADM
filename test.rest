@@ -1,0 +1,30 @@
+POST https://localhost:8000/create-checkout-session
+Content-Type: application/json
+
+{
+    "selected_plan":
+
+}
+
+###
+
+POST https://localhost:8000/webhook/stripe
+Content-Type:  application/json
+
+{
+  "id": "evt_test_webhook",
+  "type": "checkout.session.completed",
+  "data": {
+    "object": {
+      "id": "cs_test_session",
+      "customer": "cus_test_customer",
+      "subscription": "sub_test_subscription",
+      "success_url": "https://example.com/success",
+      "cancel_url": "https://example.com/cancel"
+    }
+  }
+}
+
+###
+
+GET https://localhost:8000/payment/callback
