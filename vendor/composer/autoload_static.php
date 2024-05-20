@@ -122,6 +122,7 @@ class ComposerStaticInit0ea40e77c07ea586d768c874d304b5c5
             'Symfony\\Bridge\\PhpUnit\\' => 23,
             'Symfony\\Bridge\\Monolog\\' => 23,
             'Symfony\\Bridge\\Doctrine\\' => 24,
+            'Stripe\\' => 7,
         ),
         'R' => 
         array (
@@ -515,6 +516,10 @@ class ComposerStaticInit0ea40e77c07ea586d768c874d304b5c5
         array (
             0 => __DIR__ . '/..' . '/symfony/doctrine-bridge',
         ),
+        'Stripe\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/stripe/stripe-php/lib',
+        ),
         'Ramsey\\Uuid\\Doctrine\\' => 
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid-doctrine/src',
@@ -537,8 +542,8 @@ class ComposerStaticInit0ea40e77c07ea586d768c874d304b5c5
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
