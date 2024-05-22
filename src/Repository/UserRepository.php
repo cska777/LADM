@@ -21,20 +21,14 @@ class UserRepository extends ServiceEntityRepository
         parent::__construct($registry, User::class);
     }
     
-    public function findBySearchQueryAndType($q, $type = null)
+    public function findBySearchQuery($q)
     {
     $queryBuilder = $this->createQueryBuilder('u');
 
     if ($q) {
         $queryBuilder
-            ->where('u.nom LIKE :q OR u.email LIKE :q')
+            ->where('u.nom LIKE :q OR u.email LIKE :q OR u.type LIKE :q')
             ->setParameter('q', '%'.$q.'%');
-    }
-
-    if ($type) {
-        $queryBuilder
-            ->andWhere('u.type = :type')
-            ->setParameter('type', $type);
     }
 
     return $queryBuilder

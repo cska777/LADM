@@ -51,23 +51,24 @@ class UserController extends AbstractController
     }
 
     #[Route('/search', name: 'app_search', methods: ['GET'])]
-    public function search(Request $request, UserRepository $userRepository, NewzRepository $newzRepository, ArticleRepository $articleRepository, ActionRepository $actionRepository): Response
+    public function search(Request $request, UserRepository $userRepository, NewzRepository $newzRepository, ArticleRepository $articleRepository, ActionRepository $actionRepository, AboutUsRepository $aboutUsRepository): Response
+   
     {
         $q = $request->query->get('q');
-        $type = $request->query->get('type');
-        $users = $userRepository->findBySearchQueryAndType($q, $type);
+        $users = $userRepository->findBySearchQuery($q);
         $newzs = $newzRepository->findBySearchQuery($q);
         $articles = $articleRepository->findBySearchQuery($q);
         $actions = $actionRepository->findBySearchQuery($q);
+        $aboutUs = $aboutUsRepository->findBySearchQuery($q);
 
         // Passer les variables à la vue
         return $this->render('user/index.html.twig', [
             'users' => $users,
             'newzs' => $newzs,
             'q' => $q,
-            'type' => $type,
             'articles' => $articles,
             'actions' => $actions,
+            'aboutUs' => $aboutUs,
         ]);
     }
 

@@ -20,6 +20,20 @@ class ActionRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Action::class);
     }
+    public function findBySearchQuery($q)
+    {
+    $queryBuilder = $this->createQueryBuilder('n');
+
+    if ($q) {
+        $queryBuilder
+            ->where('n.titre LIKE :q')
+            ->setParameter('q', '%'.$q.'%');
+    }
+
+    return $queryBuilder
+        ->getQuery()
+        ->getResult();
+    }
 
     //    /**
     //     * @return Action[] Returns an array of Action objects
