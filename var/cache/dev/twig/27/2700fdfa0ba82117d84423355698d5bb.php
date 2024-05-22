@@ -113,7 +113,7 @@ class __TwigTemplate_f2226a504cabae5b3dd6f7cf4a0a2141 extends Template
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a href=\"#\" class=\"nmenu nav-link align-middle px-0\">
 \t\t\t\t\t\t\t\t<i class=\"fa-solid fa-house\"></i>
-\t\t\t\t\t\t\t\t<span class=\"ms-1 d-sm-inline\">Home</span>
+\t\t\t\t\t\t\t\t<span class=\"ms-1 d-sm-inline\">Accueil</span>
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t";
@@ -328,7 +328,7 @@ form.submit();
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a href=\"#\" class=\"nmenu nav-link align-middle px-0\">
 \t\t\t\t\t\t\t\t<i class=\"fa-solid fa-house\"></i>
-\t\t\t\t\t\t\t\t<span class=\"ms-1 d-sm-inline\">Home</span>
+\t\t\t\t\t\t\t\t<span class=\"ms-1 d-sm-inline\">Accueil</span>
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t{% if is_granted('ROLE_S_AD') %}
