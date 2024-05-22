@@ -160,7 +160,7 @@ class __TwigTemplate_9113c3a692ece68ebfe858027f2aa158 extends Template
         // line 53
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("mdp_oublie");
         yield "\" class=\"log text-white\">Cliquez ici</a>
-         <a href=\"\" class=\"text-white my-3\">Retour</a>
+         </p>
          <p>Vous n'avez pas de compte?
          <a href=\"";
         // line 56
@@ -281,7 +281,7 @@ body{
     </div>
          <p>Vous avez oublié votre mot de passe?
          <a href=\"{{path('mdp_oublie')}}\" class=\"log text-white\">Cliquez ici</a>
-         <a href=\"\" class=\"text-white my-3\">Retour</a>
+         </p>
          <p>Vous n'avez pas de compte?
          <a href=\"{{ path('app_adhesion') }}\" class=\"log text-white\">S'enregister</a>
          </p>
