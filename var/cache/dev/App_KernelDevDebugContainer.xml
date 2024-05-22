@@ -388,6 +388,7 @@
     <service id="App\Controller\AboutUsController" class="App\Controller\AboutUsController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.jUv.zyj.App\Controller\AboutUsController"/>
       </call>
@@ -755,7 +756,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
       <tag priority="-50" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">controller.argument_value_resolver</tag>
-      <argument type="service" id=".service_locator._MmByzv"/>
+      <argument type="service" id=".service_locator.h4ngbOO"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">
       <tag priority="-100" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">controller.argument_value_resolver</tag>
@@ -3783,7 +3784,7 @@
     </service>
     <service id="argument_resolver.not_tagged_controller" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
       <tag name="controller.argument_value_resolver" priority="-200"/>
-      <argument type="service" id=".service_locator._MmByzv"/>
+      <argument type="service" id=".service_locator.h4ngbOO"/>
     </service>
     <service id="debug.log_processor" class="Symfony\Bridge\Monolog\Processor\DebugProcessor">
       <tag name="kernel.reset" method="reset"/>
@@ -8814,6 +8815,13 @@
         <argument key="aboutUsRepository" type="service_closure" id="App\Repository\AboutUsRepository"/>
       </argument>
     </service>
+    <service id=".service_locator.P3uOD4s" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="em" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+        <argument key="slugger" type="service_closure" id="slugger"/>
+      </argument>
+    </service>
     <service id=".service_locator.RWLxLoZ" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -8930,9 +8938,10 @@
         <argument key="article" type="service_closure" id=".errored..service_locator.XqCCpgA.App\Entity\Article"/>
       </argument>
     </service>
-    <service id=".service_locator.P3uOD4s" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.ZlQeg47" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="articleRepository" type="service_closure" id="App\Repository\ArticleRepository"/>
         <argument key="em" type="service_closure" id="doctrine.orm.default_entity_manager"/>
         <argument key="slugger" type="service_closure" id="slugger"/>
       </argument>
@@ -9061,12 +9070,13 @@
         <argument key="user" type="service_closure" id=".errored..service_locator.R0Sb2kd.App\Entity\User"/>
       </argument>
     </service>
-    <service id=".service_locator._MmByzv" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.h4ngbOO" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AboutUsController::aboutUsTab" type="service_closure" id=".service_locator.fL1.UD6"/>
         <argument key="App\Controller\AboutUsController::delete" type="service_closure" id=".service_locator.RWLxLoZ"/>
         <argument key="App\Controller\AboutUsController::index" type="service_closure" id=".service_locator.fL1.UD6"/>
+        <argument key="App\Controller\AboutUsController::new_aboutus" type="service_closure" id=".service_locator.P3uOD4s"/>
         <argument key="App\Controller\AboutUsController::update" type="service_closure" id=".service_locator.RWLxLoZ"/>
         <argument key="App\Controller\ActionController::delete" type="service_closure" id=".service_locator.mAssFzy"/>
         <argument key="App\Controller\ActionController::index" type="service_closure" id=".service_locator.v5NSJjB"/>
@@ -9270,7 +9280,7 @@
         <argument key="App\Controller\ArticleController::new_article" type="service_closure" id=".service_locator.P3uOD4s"/>
         <argument key="App\Controller\ArticleController::show" type="service_closure" id=".service_locator.XqCCpgA"/>
         <argument key="App\Controller\ArticleController::tabBord" type="service_closure" id=".service_locator.b12wXHr"/>
-        <argument key="App\Controller\ArticleController::update" type="service_closure" id=".service_locator.ELdHc_7"/>
+        <argument key="App\Controller\ArticleController::update" type="service_closure" id=".service_locator.ZlQeg47"/>
         <argument key="App\Controller\ContactController::index" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="App\Controller\DonController::save" type="service_closure" id=".service_locator.WZeIXfO"/>
         <argument key="App\Controller\EmailConfirmController::confirmEmail" type="service_closure" id=".service_locator.CsMkqUa"/>
@@ -9300,6 +9310,7 @@
         <argument key="App\Controller\AboutUsController:aboutUsTab" type="service_closure" id=".service_locator.fL1.UD6"/>
         <argument key="App\Controller\AboutUsController:delete" type="service_closure" id=".service_locator.RWLxLoZ"/>
         <argument key="App\Controller\AboutUsController:index" type="service_closure" id=".service_locator.fL1.UD6"/>
+        <argument key="App\Controller\AboutUsController:new_aboutus" type="service_closure" id=".service_locator.P3uOD4s"/>
         <argument key="App\Controller\AboutUsController:update" type="service_closure" id=".service_locator.RWLxLoZ"/>
         <argument key="App\Controller\ActionController:delete" type="service_closure" id=".service_locator.mAssFzy"/>
         <argument key="App\Controller\ActionController:index" type="service_closure" id=".service_locator.v5NSJjB"/>
@@ -9503,7 +9514,7 @@
         <argument key="App\Controller\ArticleController:new_article" type="service_closure" id=".service_locator.P3uOD4s"/>
         <argument key="App\Controller\ArticleController:show" type="service_closure" id=".service_locator.XqCCpgA"/>
         <argument key="App\Controller\ArticleController:tabBord" type="service_closure" id=".service_locator.b12wXHr"/>
-        <argument key="App\Controller\ArticleController:update" type="service_closure" id=".service_locator.ELdHc_7"/>
+        <argument key="App\Controller\ArticleController:update" type="service_closure" id=".service_locator.ZlQeg47"/>
         <argument key="App\Controller\ContactController:index" type="service_closure" id=".service_locator.CsMkqUa"/>
         <argument key="App\Controller\DonController:save" type="service_closure" id=".service_locator.WZeIXfO"/>
         <argument key="App\Controller\EmailConfirmController:confirmEmail" type="service_closure" id=".service_locator.CsMkqUa"/>
@@ -12172,7 +12183,7 @@
     <service id="Symfony\WebpackEncoreBundle\Asset\EntrypointLookupInterface" alias="webpack_encore.entrypoint_lookup[_default]"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.bJ.4HC5" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator._MmByzv"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.h4ngbOO"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
@@ -12218,6 +12229,7 @@
     <service id="security.event_dispatcher.main" alias="debug.security.event_dispatcher.main"/>
     <service id=".service_locator.gFlme_s" alias=".service_locator.y4_Zrx."/>
     <service id=".service_locator.rZtDE9i" alias=".service_locator.fL1.UD6"/>
+    <service id=".service_locator._frJunc" alias=".service_locator.P3uOD4s"/>
     <service id=".service_locator.0lASFB5" alias=".service_locator.RWLxLoZ"/>
     <service id=".service_locator.th9eKxf" alias=".service_locator.v5NSJjB"/>
     <service id=".service_locator.gaTSUXr" alias=".service_locator.9kKwU2t"/>
@@ -12236,7 +12248,7 @@
     <service id=".service_locator.pDn0Z8C" alias=".service_locator..gWl5w1"/>
     <service id=".service_locator.XqClUT3" alias=".service_locator.b12wXHr"/>
     <service id=".service_locator.s.PmVJl" alias=".service_locator.XqCCpgA"/>
-    <service id=".service_locator._frJunc" alias=".service_locator.P3uOD4s"/>
+    <service id=".service_locator.O.JIqUb" alias=".service_locator.ZlQeg47"/>
     <service id=".service_locator.szzbIAp" alias=".service_locator.ELdHc_7"/>
     <service id=".service_locator.hOuXX4M" alias=".service_locator.WZeIXfO"/>
     <service id=".service_locator.5rB4YV8" alias=".service_locator.RYTZhVO"/>

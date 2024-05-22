@@ -43,7 +43,7 @@ class ArticleController extends AbstractController
 
     
 
-    #[Route("/new", name: "new_article")]
+    #[Route("/new_article", name: "new_article")]
     public function new_article(Request $request, EntityManagerInterface $em, SluggerInterface $slugger): Response
     {
         $data = [];
@@ -84,7 +84,7 @@ class ArticleController extends AbstractController
     }
 
     #[Route("/update/{id}", name: "update_article")]
-    public function update(int $id, ArticleRepository $articleRepository, Request $request, EntityManagerInterface $em)
+    public function update(int $id, ArticleRepository $articleRepository, Request $request, EntityManagerInterface $em, SluggerInterface $slugger)
     {
         $article = $articleRepository->findOneBy(["id" => $id]);
         $form = $this->createForm(ArticleType::class, $article, ["label" => "modifier"]);

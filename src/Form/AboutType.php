@@ -8,6 +8,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 
@@ -20,12 +21,14 @@ class AboutType extends AbstractType
             ->add('contenu', TextareaType::class, [
                 'attr' => ['class' => 'tinymce'],
             ])
-            ->add('type', ChoiceType::class, [
-                'choices'  => [
-                    'about-us-image' => 'about-us-image',
-                    'accueil-image' => 'accueil-image',
-                    'section' => 'section'
-                ],
+            ->add("image", FileType::class, [
+                "label" => false,
+                "required" => true,
+                "data_class" => null,
+            ])
+            ->add("auteur")
+            ->add("date", null, [
+                "widget" => "single_text",
             ])
             ->add('creer', SubmitType::class, [
                 'label' => isset($options["label"]) ? $options["label"] : "Ajouter",

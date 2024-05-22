@@ -88,12 +88,17 @@ class __TwigTemplate_f0cedadab885709fa8164f261417f7f0 extends Template
         // line 12
         yield from         $this->loadTemplate("home/presentation.html.twig", "home/index.html.twig", 12)->unwrap()->yield($context);
         // line 13
-        yield from         $this->loadTemplate("home/map.html.twig", "home/index.html.twig", 13)->unwrap()->yield($context);
+        yield "<a class=\"btn btn-primary btnSavoirPlus\" href=\"";
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("about_us");
+        yield "\">En savoir plus...</a>
+";
         // line 14
-        yield from         $this->loadTemplate("home/actions.html.twig", "home/index.html.twig", 14)->unwrap()->yield($context);
+        yield from         $this->loadTemplate("home/map.html.twig", "home/index.html.twig", 14)->unwrap()->yield($context);
         // line 15
-        yield from         $this->loadTemplate("home/actualite.html.twig", "home/index.html.twig", 15)->unwrap()->yield($context);
+        yield from         $this->loadTemplate("home/actions.html.twig", "home/index.html.twig", 15)->unwrap()->yield($context);
         // line 16
+        yield from         $this->loadTemplate("home/actualite.html.twig", "home/index.html.twig", 16)->unwrap()->yield($context);
+        // line 17
         yield "\t
 
 
@@ -108,7 +113,7 @@ class __TwigTemplate_f0cedadab885709fa8164f261417f7f0 extends Template
             </p>
             <div class=\"text-center\">
             <a href=\"";
-        // line 29
+        // line 30
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_subscribe");
         yield "\" class=\"btn btn-primary btn-lg\">Subscribe</a>
             </div>
@@ -149,7 +154,7 @@ class __TwigTemplate_f0cedadab885709fa8164f261417f7f0 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  112 => 29,  97 => 16,  95 => 15,  93 => 14,  91 => 13,  89 => 12,  87 => 11,  84 => 10,  78 => 7,  75 => 6,  72 => 5,  69 => 4,  59 => 3,  36 => 1,);
+        return array (  117 => 30,  102 => 17,  100 => 16,  98 => 15,  96 => 14,  91 => 13,  89 => 12,  87 => 11,  84 => 10,  78 => 7,  75 => 6,  72 => 5,  69 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -166,6 +171,7 @@ class __TwigTemplate_f0cedadab885709fa8164f261417f7f0 extends Template
     {% endif %}
 {% include 'home/carousel.html.twig' %}
 {% include 'home/presentation.html.twig' %}
+<a class=\"btn btn-primary btnSavoirPlus\" href=\"{{ path('about_us')}}\">En savoir plus...</a>
 {% include 'home/map.html.twig' %}
 {% include 'home/actions.html.twig' %}
 {% include 'home/actualite.html.twig' %}

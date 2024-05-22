@@ -106,8 +106,11 @@
 				{% endif %}
 				{% if is_granted('ROLE_S_AD') or is_granted('ROLE_ADMIN') %}
 					{% include 'article/tabBord.html.twig'  %}
+					<hr>
 					{% include 'action/tabBord.html.twig'  %}
+					<hr>
 					{% include 'about-us/tabBord.html.twig'  %}
+					<hr>
 
 
 				{% endif %}
