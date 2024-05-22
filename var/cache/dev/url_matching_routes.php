@@ -18,16 +18,14 @@ return [
         '/about_us/tab' => [[['_route' => 'tab_about_us', '_controller' => 'App\\Controller\\AboutUsController::aboutUsTab'], null, null, null, false, false, null]],
         '/action' => [[['_route' => 'index_action', '_controller' => 'App\\Controller\\ActionController::index'], null, null, null, false, false, null]],
         '/action/tab' => [[['_route' => 'tab_action', '_controller' => 'App\\Controller\\ActionController::tabBord'], null, null, null, false, false, null]],
-        '/new' => [
-            [['_route' => 'new_action', '_controller' => 'App\\Controller\\ActionController::new_action'], null, null, null, false, false, null],
-            [['_route' => 'new_article', '_controller' => 'App\\Controller\\ArticleController::new_article'], null, null, null, false, false, null],
-        ],
+        '/new' => [[['_route' => 'new_action', '_controller' => 'App\\Controller\\ActionController::new_action'], null, null, null, false, false, null]],
         '/adhesion' => [[['_route' => 'app_adhesion', '_controller' => 'App\\Controller\\AdhesionController::new'], null, null, null, false, false, null]],
         '/admin' => [[['_route' => 'admin', '_controller' => 'App\\Controller\\Admin\\DashboardController::index'], null, null, null, false, false, null]],
         '/mailer' => [[['_route' => 'app_mailer', '_controller' => 'App\\Controller\\Admin\\MailerController::sendEmailAction'], null, null, null, false, false, null]],
         '/article' => [[['_route' => 'index_article', '_controller' => 'App\\Controller\\ArticleController::index'], null, null, null, false, false, null]],
-        '/article/tab' => [[['_route' => 'tab_article', '_controller' => 'App\\Controller\\ArticleController::tabBord'], null, null, null, false, false, null]],
-        '/actualites' => [[['_route' => 'actualites', '_controller' => 'App\\Controller\\ArticleController::actualites'], null, null, null, false, false, null]],
+        '/article/article/tab' => [[['_route' => 'tab_article', '_controller' => 'App\\Controller\\ArticleController::tabBord'], null, null, null, false, false, null]],
+        '/article/new' => [[['_route' => 'new_article', '_controller' => 'App\\Controller\\ArticleController::new_article'], null, null, null, false, false, null]],
+        '/article/actualites' => [[['_route' => 'actualites', '_controller' => 'App\\Controller\\ArticleController::actualites'], null, null, null, false, false, null]],
         '/contact' => [[['_route' => 'app_contact', '_controller' => 'App\\Controller\\ContactController::index'], null, null, null, false, false, null]],
         '/backup-database' => [[['_route' => 'app_database_backup', '_controller' => 'App\\Controller\\DatabaseBackupController::backupDatabase'], null, null, null, false, false, null]],
         '/don' => [[['_route' => 'app_don', '_controller' => 'App\\Controller\\DonController::index'], null, null, null, false, false, null]],
@@ -72,33 +70,33 @@ return [
                 .')'
                 .'|/delete/(?'
                     .'|aboutus/([^/]++)(*:229)'
-                    .'|([^/]++)(?'
-                        .'|(*:248)'
-                    .')'
+                    .'|([^/]++)(*:245)'
                 .')'
                 .'|/a(?'
-                    .'|boutus/([^/]++)(*:278)'
-                    .'|rticle/([^/]++)(*:301)'
+                    .'|boutus/([^/]++)(*:274)'
+                    .'|rticle/(?'
+                        .'|update/([^/]++)(*:307)'
+                        .'|delete/([^/]++)(*:330)'
+                        .'|([^/]++)(*:346)'
+                    .')'
                 .')'
                 .'|/u(?'
-                    .'|pdate/([^/]++)(?'
-                        .'|(*:332)'
-                    .')'
-                    .'|nsubscribe/([^/]++)(*:360)'
+                    .'|pdate/([^/]++)(*:375)'
+                    .'|nsubscribe/([^/]++)(*:402)'
                     .'|ser/([^/]++)(?'
-                        .'|(*:383)'
-                        .'|/edit(*:396)'
-                        .'|(*:404)'
+                        .'|(*:425)'
+                        .'|/edit(*:438)'
+                        .'|(*:446)'
                     .')'
                 .')'
-                .'|/confirm/([^/]++)(*:431)'
+                .'|/confirm/([^/]++)(*:473)'
                 .'|/newz/([^/]++)(?'
-                    .'|(*:456)'
-                    .'|/edit(*:469)'
-                    .'|(*:477)'
+                    .'|(*:498)'
+                    .'|/edit(*:511)'
+                    .'|(*:519)'
                 .')'
-                .'|/mdp_oublie/([^/]++)(*:506)'
-                .'|/([^/]++)(*:523)'
+                .'|/mdp_oublie/([^/]++)(*:548)'
+                .'|/([^/]++)(*:565)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -111,26 +109,22 @@ return [
         181 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         191 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
         229 => [[['_route' => 'delete_aboutus', '_controller' => 'App\\Controller\\AboutUsController::delete'], ['id'], null, null, false, true, null]],
-        248 => [
-            [['_route' => 'delete_action', '_controller' => 'App\\Controller\\ActionController::delete'], ['id'], null, null, false, true, null],
-            [['_route' => 'delete_article', '_controller' => 'App\\Controller\\ArticleController::delete'], ['id'], null, null, false, true, null],
-        ],
-        278 => [[['_route' => 'update_aboutUs', '_controller' => 'App\\Controller\\AboutUsController::update'], ['id'], null, null, false, true, null]],
-        301 => [[['_route' => 'show_article', '_controller' => 'App\\Controller\\ArticleController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        332 => [
-            [['_route' => 'update_action', '_controller' => 'App\\Controller\\ActionController::update'], ['id'], null, null, false, true, null],
-            [['_route' => 'update_article', '_controller' => 'App\\Controller\\ArticleController::update'], ['id'], null, null, false, true, null],
-        ],
-        360 => [[['_route' => 'app_unsubscribe', '_controller' => 'App\\Controller\\UnsubscribeController::unsubscribe'], ['token'], null, null, false, true, null]],
-        383 => [[['_route' => 'app_user_show', '_controller' => 'App\\Controller\\UserController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        396 => [[['_route' => 'app_user_edit', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        404 => [[['_route' => 'app_user_delete', '_controller' => 'App\\Controller\\UserController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        431 => [[['_route' => 'app_confirm', '_controller' => 'App\\Controller\\EmailConfirmController::confirmEmail'], ['token'], null, null, false, true, null]],
-        456 => [[['_route' => 'app_newz_show', '_controller' => 'App\\Controller\\NewzController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        469 => [[['_route' => 'app_newz_edit', '_controller' => 'App\\Controller\\NewzController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        477 => [[['_route' => 'app_newz_delete', '_controller' => 'App\\Controller\\NewzController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        506 => [[['_route' => 'mdp_reset', '_controller' => 'App\\Controller\\SecurityController::mdpReset'], ['token'], null, null, false, true, null]],
-        523 => [
+        245 => [[['_route' => 'delete_action', '_controller' => 'App\\Controller\\ActionController::delete'], ['id'], null, null, false, true, null]],
+        274 => [[['_route' => 'update_aboutUs', '_controller' => 'App\\Controller\\AboutUsController::update'], ['id'], null, null, false, true, null]],
+        307 => [[['_route' => 'update_article', '_controller' => 'App\\Controller\\ArticleController::update'], ['id'], null, null, false, true, null]],
+        330 => [[['_route' => 'delete_article', '_controller' => 'App\\Controller\\ArticleController::delete'], ['id'], null, null, false, true, null]],
+        346 => [[['_route' => 'show_article', '_controller' => 'App\\Controller\\ArticleController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        375 => [[['_route' => 'update_action', '_controller' => 'App\\Controller\\ActionController::update'], ['id'], null, null, false, true, null]],
+        402 => [[['_route' => 'app_unsubscribe', '_controller' => 'App\\Controller\\UnsubscribeController::unsubscribe'], ['token'], null, null, false, true, null]],
+        425 => [[['_route' => 'app_user_show', '_controller' => 'App\\Controller\\UserController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        438 => [[['_route' => 'app_user_edit', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        446 => [[['_route' => 'app_user_delete', '_controller' => 'App\\Controller\\UserController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        473 => [[['_route' => 'app_confirm', '_controller' => 'App\\Controller\\EmailConfirmController::confirmEmail'], ['token'], null, null, false, true, null]],
+        498 => [[['_route' => 'app_newz_show', '_controller' => 'App\\Controller\\NewzController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        511 => [[['_route' => 'app_newz_edit', '_controller' => 'App\\Controller\\NewzController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        519 => [[['_route' => 'app_newz_delete', '_controller' => 'App\\Controller\\NewzController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        548 => [[['_route' => 'mdp_reset', '_controller' => 'App\\Controller\\SecurityController::mdpReset'], ['token'], null, null, false, true, null]],
+        565 => [
             [['_route' => 'not_found', '_controller' => 'App\\Controller\\ErrorController::notFound'], ['url'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

@@ -1,0 +1,3 @@
+<?php //d62b20ae0890ecf5842fb3dee3419b27
+
+return [PHP_INT_MAX, 'styles/css/dash_adherent.css'];

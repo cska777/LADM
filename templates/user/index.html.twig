@@ -33,46 +33,33 @@
 									<span class="ms-1 d-sm-inline">Membres</span>
 								</a>
 							</li>
-							<li>
-								<a href="#" class="nmenu nav-link px-0 align-middle filter-type" data-type="adherent">
-									<i class="fa-solid fa-user"></i>
-									<span class="ms-1 d-sm-inline">Adhérents</span>
-								</a>
-							</li>
-							<li>
-								<a href="#" class="nmenu nav-link px-0 align-middle filter-type" data-type="entreprise">
-									<i class="fa-solid fa-building"></i>
-									<span class="ms-1 d-sm-inline">Entreprises</span>
-								</a>
-							</li>
-							<li>
-								<a href="#submenu3" class="nmenu nav-link px-0 align-middle">
-									<i class="fa-solid fa-palette"></i>
-									<span class="ms-1 d-sm-inline">Custom</span>
-								</a>
-							</li>
 						{% endif %}
 						{% if is_granted('ROLE_S_AD') or is_granted('ROLE_ADMIN') %}
 							<li>
+								<a href="#submenu" class="nmenu nav-link px-0 align-middle ">
+									<i class="fa-regular fa-images"></i>
+									<span class="ms-1 d-sm-inline">Carousel</span>
+								</a>
+							</li>
+							<li>
+								<a href="#submenu1" class="nmenu nav-link px-0 align-middle ">
+									<i class="fa-solid fa-address-card"></i>
+									<span class="ms-1 d-sm-inline">A Propos</span>
+								</a>
+							</li>
+							<li>
 								<a href="#submenu2" class="nmenu nav-link px-0 align-middle ">
+									<i class="fa-solid fa-hand-fist"></i>
+									<span class="ms-1 d-sm-inline">Actions</span>
+								</a>
+							</li>
+							<li>
+								<a href="#submenu3" class="nmenu nav-link px-0 align-middle ">
 									<i class="fa-solid fa-newspaper"></i>
 									<span class="ms-1 d-sm-inline">Articles</span>
 								</a>
 							</li>
-							<li>
-								<a href="#apropos" class="nmenu nav-link px-0 align-middle ">
-									<i class="fa-solid fa-newspaper"></i>
-									<span class="ms-1 d-sm-inline">A Propos
-									</span>
-								</a>
-							</li>
-						</li>
-						<li>
-							<a href="#submenu2" class="nmenu nav-link px-0 align-middle ">
-								<i class="fa-solid fa-newspaper"></i>
-								<span class="ms-1 d-sm-inline">Actions</span>
-							</a>
-						</li>
+						</li>	
 					{% endif %}
 					<li>
 						<a href="#submenu3" class="nmenu nav-link px-0 align-middle">
@@ -82,8 +69,8 @@
 					</li>
 					<li>
 						<a href="#submenu3" class="nmenu nav-link px-0 align-middle">
-							<i class="fa-solid fa-bookmark"></i>
-							<span class="ms-1 d-sm-inline">Mon Statut</span>
+							<i class="fa-solid fa-file-invoice-dollar"></i>
+							<span class="ms-1 d-sm-inline">Cotisations</span>
 						</a>
 					</li>
 				</ul>
@@ -121,8 +108,8 @@
 					</div>
 					<hr>
 				</section>
-				<section class='for'>
-					<h2 class="my-3 text-center text-uppercase">Gerer les Forfaits</h2>
+				<section class='cot'>
+					<h2 class="my-3 text-center text-uppercase">Gerer les Cotisations</h2>
 					<div class="adTable table-responsive-sm d-flex justify-content-center">
 						<h3>
 							<i class="fa-solid fa-person-digging"></i>

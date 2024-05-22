@@ -14,9 +14,11 @@
             <tbody>
             {% for article in articles %}
                 <tr>
+                    <td>
                     <div class="desc">
-                    <td>{{ article.description|striptags|raw}}</td>
+                    {{ article.description|striptags|raw}}</td>
                     </div>
+                    </td>
                     <td>{{ article.date ? article.date|date('Y-m-d') : '' }}</td>
                     <td>{{ article.titre }}</td>
                     <td>{{ article.auteur }}</td>

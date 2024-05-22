@@ -24,7 +24,7 @@ class ArticleController extends AbstractController
         ]);
     }
 
-    #[Route('/article/tab', name: 'tab_article')]
+    #[Route('article/article/tab', name: 'tab_article')]
     public function tabBord(ArticleRepository $articleRepository): Response
     {
         $articles = $articleRepository->findAll();
@@ -33,7 +33,7 @@ class ArticleController extends AbstractController
         ]);
     }
 
-    #[Route('/article/{id}', name: 'show_article')]
+    #[Route('article/article/{id}', name: 'show_article')]
     public function show(Article $article): Response
     {
         return $this->render('article/show.html.twig', [
@@ -43,7 +43,7 @@ class ArticleController extends AbstractController
 
     
 
-    #[Route("/new", name: "new_article")]
+    #[Route("article/new", name: "new_article")]
     public function new_article(Request $request, EntityManagerInterface $em, SluggerInterface $slugger): Response
     {
         $data = [];
@@ -83,7 +83,7 @@ class ArticleController extends AbstractController
         return $this->render("article/new_article.html.twig", $data);
     }
 
-    #[Route("/update/{id}", name: "update_article")]
+    #[Route("article/update/{id}", name: "update_article")]
     public function update(int $id, ArticleRepository $articleRepository, Request $request, EntityManagerInterface $em)
     {
         $article = $articleRepository->findOneBy(["id" => $id]);
@@ -119,7 +119,7 @@ class ArticleController extends AbstractController
         ]);
     }
 
-    #[Route("/delete/{id}", name: "delete_article")]
+    #[Route("article/delete/{id}", name: "delete_article")]
     public function delete(EntityManagerInterface $em, ArticleRepository $articleRepository, int $id)
     {
         $article = $articleRepository->FindOneBy(["id" => $id]);
@@ -128,7 +128,7 @@ class ArticleController extends AbstractController
         return $this->redirectToRoute("app_user_index");
     }
 
-    #[Route('/actualites', name: 'actualites')]
+    #[Route('article/actualites', name: 'actualites')]
     public function actualites(ArticleRepository $articleRepository): Response
     {
         $articles = $articleRepository->findAll();

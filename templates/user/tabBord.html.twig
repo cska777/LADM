@@ -11,7 +11,7 @@
                     <th class='ico'></th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="">
             {% for user in users %}
                 <tr class="">
                     <td>{{ user.nom }}</td>
@@ -25,20 +25,20 @@
                         {% endif %}
                     {% endfor %}</td>
                     <td class="ico">
-                    <div class='d-flex'>
+                    <div class='icone'>
                         <form>
-                        <a class="btn btn-success py-1 px-2" href="{{ path('app_user_edit', {'id': user.id}) }}">
+                        <a class=" btn btn-success py-1 px-2" href="{{ path('app_user_edit', {'id': user.id}) }}">
                             <i class="visu2 fa-solid fa-pen-to-square"></i>
                         </a>
                         </form>
                         <form>
-                        <a class="btn btn-warning py-1 px-2" href="">
+                        <a class=" btn btn-warning py-1 px-2" href="">
                             <i class="visu2 fa-solid fa-envelope"></i>
                         </a>
                         </form>
                         <form action="{{ path('app_user_delete', {'id': user.id}) }}" method="post" onsubmit="return confirm('Êtes-vous sur de vouloir supprimer votre compte ?')";>
                             <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ user.id) }}">
-                            <button type="submit" class="btn btn-danger py-1 px-2">
+                            <button type="submit" class=" btn btn-danger py-1 px-2">
                                 <i class="fa-solid fa-trash"></i>
                             </button>
                         </form>
