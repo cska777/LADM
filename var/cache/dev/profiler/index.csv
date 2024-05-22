@@ -1390,3 +1390,5 @@ abc2ca,::1,GET,https://localhost:8000/,1716403282,,200,request
 5a16ad,::1,GET,https://localhost:8000/article/actualites,1716403284,,200,request
 198cab,::1,GET,https://localhost:8000/about_us,1716403285,,200,request
 471e6c,::1,GET,https://localhost:8000/,1716403918,,200,request
+1ee302,::1,GET,https://localhost:8000/article/1,1716404036,,200,request
+f2bcf0,::1,GET,https://localhost:8000/about_us,1716404161,,200,request
