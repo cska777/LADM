@@ -67,7 +67,7 @@ class __TwigTemplate_2b50566bc4b28a13f66aa3fcec1cd969 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
         // line 3
-        yield "\tA propos
+        yield "\tÀ propos
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -90,8 +90,138 @@ class __TwigTemplate_2b50566bc4b28a13f66aa3fcec1cd969 extends Template
 
         // line 7
         yield "
-\t<script>
-\t\tdocument.addEventListener('DOMContentLoaded', (event) => {
+
+</head>
+\t";
+        // line 10
+        $context['_parent'] = $context;
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["aboutUs"]) || array_key_exists("aboutUs", $context) ? $context["aboutUs"] : (function () { throw new RuntimeError('Variable "aboutUs" does not exist.', 10, $this->source); })()));
+        $context['loop'] = [
+          'parent' => $context['_parent'],
+          'index0' => 0,
+          'index'  => 1,
+          'first'  => true,
+        ];
+        if (is_array($context['_seq']) || (is_object($context['_seq']) && $context['_seq'] instanceof \Countable)) {
+            $length = count($context['_seq']);
+            $context['loop']['revindex0'] = $length - 1;
+            $context['loop']['revindex'] = $length;
+            $context['loop']['length'] = $length;
+            $context['loop']['last'] = 1 === $length;
+        }
+        foreach ($context['_seq'] as $context["_key"] => $context["apropos"]) {
+            // line 11
+            yield "\t<div class=\"banner\" style=\"background-image: url('";
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("upload/" . CoreExtension::getAttribute($this->env, $this->source, $context["apropos"], "image", [], "any", false, false, false, 11))), "html", null, true);
+            yield "');\">
+\t</div>
+
+
+<div class=\"card-container\">
+\t\t<div class=\"card-about-us\">
+\t\t\t<a href=\"#";
+            // line 17
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["apropos"], "titre", [], "any", false, false, false, 17), "html", null, true);
+            yield "\" class=\"disable-link\">
+\t\t\t\t<h2>";
+            // line 18
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["apropos"], "titre", [], "any", false, false, false, 18), "html", null, true);
+            yield "</h2>
+\t\t\t\t<div class=\"about-us-p\">";
+            // line 19
+            yield CoreExtension::getAttribute($this->env, $this->source, $context["apropos"], "contenu", [], "any", false, false, false, 19);
+            yield "</div>
+\t\t\t</a>
+\t\t</div>
+
+
+
+
+
+</div>
+\t";
+            // line 28
+            if (((CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 28) % 2) == 1)) {
+                // line 29
+                yield "\t\t<div class=\"section\" id=\"";
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["apropos"], "titre", [], "any", false, false, false, 29), "html", null, true);
+                yield "\">
+\t\t\t<h2 class=\"about-us-title \">";
+                // line 30
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["apropos"], "titre", [], "any", false, false, false, 30), "html", null, true);
+                yield "</h2>
+\t\t\t<div class=\"flex-container\">
+\t\t\t\t<div class=\"flex-item text-content class padding-right\">
+\t\t\t\t\t<div class=\"text-width\">
+\t\t\t\t\t\t<p>";
+                // line 34
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["apropos"], "contenu", [], "any", false, false, false, 34);
+                yield "</p>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t\t<div class=\"flex-item\">
+\t\t\t\t\t<img src=\"";
+                // line 38
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("upload/" . CoreExtension::getAttribute($this->env, $this->source, $context["apropos"], "image", [], "any", false, false, false, 38))), "html", null, true);
+                yield "\" alt=\"Notre Histoire\" class=\"image-about\">
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+
+\t";
+            }
+            // line 44
+            yield "\t";
+            if (((CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 44) % 2) == 0)) {
+                // line 45
+                yield "\t\t<!-- Que faisons-nous ? -->
+\t\t<div class=\"section\" id=\"";
+                // line 46
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["apropos"], "titre", [], "any", false, false, false, 46), "html", null, true);
+                yield "\">
+\t\t\t<h2 class=\"about-us-title animate__animated animate__backInRight \" id=\"what-do-we-do\">";
+                // line 47
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["apropos"], "titre", [], "any", false, false, false, 47), "html", null, true);
+                yield "</h2>
+\t\t\t<div class=\"flex-container\">
+\t\t\t\t<div class=\"flex-item\">
+\t\t\t\t\t<img src=\"";
+                // line 50
+                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("upload/" . CoreExtension::getAttribute($this->env, $this->source, $context["apropos"], "image", [], "any", false, false, false, 50))), "html", null, true);
+                yield "\" alt=\"Notre Histoire\" class=\"image-about\">
+\t\t\t\t</div>
+\t\t\t\t<div class=\"flex-item text-content class padding-right\">
+\t\t\t\t\t<div class=\"text-width\">
+\t\t\t\t\t\t<p class=\"text-width\">";
+                // line 54
+                yield CoreExtension::getAttribute($this->env, $this->source, $context["apropos"], "contenu", [], "any", false, false, false, 54);
+                yield "</p>
+\t\t\t\t\t</div>
+
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+
+\t";
+            }
+            // line 62
+            yield "
+";
+            ++$context['loop']['index0'];
+            ++$context['loop']['index'];
+            $context['loop']['first'] = false;
+            if (isset($context['loop']['length'])) {
+                --$context['loop']['revindex0'];
+                --$context['loop']['revindex'];
+                $context['loop']['last'] = 0 === $context['loop']['revindex0'];
+            }
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['apropos'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 64
+        yield "<script>
+\tdocument.addEventListener('DOMContentLoaded', (event) => {
 let observer;
 let options = {
 root: null, // utilise le viewport comme zone de visibilité
@@ -116,162 +246,7 @@ index + 1
 });
 }
 });
-\t</script>
-
-</head>
-";
-        // line 37
-        $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["aboutUsImage"]) || array_key_exists("aboutUsImage", $context) ? $context["aboutUsImage"] : (function () { throw new RuntimeError('Variable "aboutUsImage" does not exist.', 37, $this->source); })()));
-        foreach ($context['_seq'] as $context["_key"] => $context["aboutUs"]) {
-            // line 38
-            yield "
-\t<div class=\"banner\" style=\"background-image: url('";
-            // line 39
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("upload/" . CoreExtension::getAttribute($this->env, $this->source, $context["aboutUs"], "image", [], "any", false, false, false, 39))), "html", null, true);
-            yield "');\">
-\t\t<h1 class=\"center-p\">A propos de nous</h1>
-\t</div>
-
-";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['aboutUs'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 44
-        yield "
-
-<div class=\"card-container\">
-\t";
-        // line 47
-        $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["aboutUs"]) || array_key_exists("aboutUs", $context) ? $context["aboutUs"] : (function () { throw new RuntimeError('Variable "aboutUs" does not exist.', 47, $this->source); })()));
-        foreach ($context['_seq'] as $context["_key"] => $context["aboutus"]) {
-            // line 48
-            yield "\t\t<div class=\"card-about-us\">
-\t\t\t<a href=\"#";
-            // line 49
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["aboutus"], "titre", [], "any", false, false, false, 49), "html", null, true);
-            yield "\" class=\"disable-link\">
-\t\t\t\t<h2>";
-            // line 50
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["aboutus"], "titre", [], "any", false, false, false, 50), "html", null, true);
-            yield "</h2>
-\t\t\t\t<div class=\"about-us-p\">";
-            // line 51
-            yield CoreExtension::getAttribute($this->env, $this->source, $context["aboutus"], "contenu", [], "any", false, false, false, 51);
-            yield "</div>
-\t\t\t</a>
-\t\t</div>
-
-
-\t";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['aboutus'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 57
-        yield "
-
-</div>
-";
-        // line 60
-        $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["aboutUs"]) || array_key_exists("aboutUs", $context) ? $context["aboutUs"] : (function () { throw new RuntimeError('Variable "aboutUs" does not exist.', 60, $this->source); })()));
-        $context['loop'] = [
-          'parent' => $context['_parent'],
-          'index0' => 0,
-          'index'  => 1,
-          'first'  => true,
-        ];
-        if (is_array($context['_seq']) || (is_object($context['_seq']) && $context['_seq'] instanceof \Countable)) {
-            $length = count($context['_seq']);
-            $context['loop']['revindex0'] = $length - 1;
-            $context['loop']['revindex'] = $length;
-            $context['loop']['length'] = $length;
-            $context['loop']['last'] = 1 === $length;
-        }
-        foreach ($context['_seq'] as $context["_key"] => $context["aboutus"]) {
-            // line 61
-            yield "\t";
-            if (((CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 61) % 2) == 1)) {
-                // line 62
-                yield "\t\t<div class=\"section\" id=\"";
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["aboutus"], "titre", [], "any", false, false, false, 62), "html", null, true);
-                yield "\">
-\t\t\t<h2 class=\"about-us-title \">";
-                // line 63
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["aboutus"], "titre", [], "any", false, false, false, 63), "html", null, true);
-                yield "</h2>
-\t\t\t<div class=\"flex-container\">
-\t\t\t\t<div class=\"flex-item text-content class padding-right\">
-\t\t\t\t\t<div class=\"text-width\">
-\t\t\t\t\t\t<p>";
-                // line 67
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["aboutus"], "contenu", [], "any", false, false, false, 67);
-                yield "</p>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t\t<div class=\"flex-item\">
-\t\t\t\t\t<img src=\"";
-                // line 71
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("upload/" . CoreExtension::getAttribute($this->env, $this->source, $context["aboutus"], "image", [], "any", false, false, false, 71))), "html", null, true);
-                yield "\" alt=\"Notre Histoire\" class=\"image-about\">
-\t\t\t\t</div>
-\t\t\t</div>
-\t\t</div>
-
-\t";
-            }
-            // line 77
-            yield "\t";
-            if (((CoreExtension::getAttribute($this->env, $this->source, $context["loop"], "index", [], "any", false, false, false, 77) % 2) == 0)) {
-                // line 78
-                yield "\t\t<!-- Que faisons-nous ? -->
-\t\t<div class=\"section\" id=\"";
-                // line 79
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["aboutus"], "titre", [], "any", false, false, false, 79), "html", null, true);
-                yield "\">
-\t\t\t<h2 class=\"about-us-title animate__animated animate__backInRight \" id=\"what-do-we-do\">";
-                // line 80
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["aboutus"], "titre", [], "any", false, false, false, 80), "html", null, true);
-                yield "</h2>
-\t\t\t<div class=\"flex-container\">
-\t\t\t\t<div class=\"flex-item\">
-\t\t\t\t\t<img src=\"";
-                // line 83
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("upload/" . CoreExtension::getAttribute($this->env, $this->source, $context["aboutus"], "image", [], "any", false, false, false, 83))), "html", null, true);
-                yield "\" alt=\"Notre Histoire\" class=\"image-about\">
-\t\t\t\t</div>
-\t\t\t\t<div class=\"flex-item text-content class padding-right\">
-\t\t\t\t\t<div class=\"text-width\">
-\t\t\t\t\t\t<p class=\"text-width\">";
-                // line 87
-                yield CoreExtension::getAttribute($this->env, $this->source, $context["aboutus"], "contenu", [], "any", false, false, false, 87);
-                yield "</p>
-\t\t\t\t\t</div>
-
-\t\t\t\t</div>
-\t\t\t</div>
-\t\t</div>
-
-\t";
-            }
-            // line 95
-            yield "
-";
-            ++$context['loop']['index0'];
-            ++$context['loop']['index'];
-            $context['loop']['first'] = false;
-            if (isset($context['loop']['length'])) {
-                --$context['loop']['revindex0'];
-                --$context['loop']['revindex'];
-                $context['loop']['last'] = 0 === $context['loop']['revindex0'];
-            }
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['aboutus'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
+</script>";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -302,20 +277,76 @@ index + 1
      */
     public function getDebugInfo()
     {
-        return array (  261 => 95,  250 => 87,  243 => 83,  237 => 80,  233 => 79,  230 => 78,  227 => 77,  218 => 71,  211 => 67,  204 => 63,  199 => 62,  196 => 61,  179 => 60,  174 => 57,  162 => 51,  158 => 50,  154 => 49,  151 => 48,  147 => 47,  142 => 44,  131 => 39,  128 => 38,  124 => 37,  92 => 7,  82 => 6,  70 => 3,  60 => 2,  37 => 1,);
+        return array (  223 => 64,  208 => 62,  197 => 54,  190 => 50,  184 => 47,  180 => 46,  177 => 45,  174 => 44,  165 => 38,  158 => 34,  151 => 30,  146 => 29,  144 => 28,  132 => 19,  128 => 18,  124 => 17,  114 => 11,  97 => 10,  92 => 7,  82 => 6,  70 => 3,  60 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 {% block title %}
-\tA propos
+\tÀ propos
 {% endblock %}
 
 {% block body %}
 
-\t<script>
-\t\tdocument.addEventListener('DOMContentLoaded', (event) => {
+
+</head>
+\t{% for apropos in aboutUs %}
+\t<div class=\"banner\" style=\"background-image: url('{{ asset('upload/' ~ apropos.image) }}');\">
+\t</div>
+
+
+<div class=\"card-container\">
+\t\t<div class=\"card-about-us\">
+\t\t\t<a href=\"#{{ apropos.titre }}\" class=\"disable-link\">
+\t\t\t\t<h2>{{ apropos.titre }}</h2>
+\t\t\t\t<div class=\"about-us-p\">{{ apropos.contenu|raw }}</div>
+\t\t\t</a>
+\t\t</div>
+
+
+
+
+
+</div>
+\t{% if loop.index % 2 == 1 %}
+\t\t<div class=\"section\" id=\"{{ apropos.titre }}\">
+\t\t\t<h2 class=\"about-us-title \">{{ apropos.titre }}</h2>
+\t\t\t<div class=\"flex-container\">
+\t\t\t\t<div class=\"flex-item text-content class padding-right\">
+\t\t\t\t\t<div class=\"text-width\">
+\t\t\t\t\t\t<p>{{ apropos.contenu|raw }}</p>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t\t<div class=\"flex-item\">
+\t\t\t\t\t<img src=\"{{ asset('upload/' ~ apropos.image) }}\" alt=\"Notre Histoire\" class=\"image-about\">
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+
+\t{% endif %}
+\t{% if loop.index % 2 == 0 %}
+\t\t<!-- Que faisons-nous ? -->
+\t\t<div class=\"section\" id=\"{{ apropos.titre }}\">
+\t\t\t<h2 class=\"about-us-title animate__animated animate__backInRight \" id=\"what-do-we-do\">{{ apropos.titre }}</h2>
+\t\t\t<div class=\"flex-container\">
+\t\t\t\t<div class=\"flex-item\">
+\t\t\t\t\t<img src=\"{{ asset('upload/' ~ apropos.image) }}\" alt=\"Notre Histoire\" class=\"image-about\">
+\t\t\t\t</div>
+\t\t\t\t<div class=\"flex-item text-content class padding-right\">
+\t\t\t\t\t<div class=\"text-width\">
+\t\t\t\t\t\t<p class=\"text-width\">{{ apropos.contenu|raw }}</p>
+\t\t\t\t\t</div>
+
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+
+\t{% endif %}
+
+{% endfor %}
+<script>
+\tdocument.addEventListener('DOMContentLoaded', (event) => {
 let observer;
 let options = {
 root: null, // utilise le viewport comme zone de visibilité
@@ -340,69 +371,7 @@ index + 1
 });
 }
 });
-\t</script>
-
-</head>
-{% for aboutUs in aboutUsImage %}
-
-\t<div class=\"banner\" style=\"background-image: url('{{ asset('upload/' ~ aboutUs.image) }}');\">
-\t\t<h1 class=\"center-p\">A propos de nous</h1>
-\t</div>
-
-{% endfor %}
-
-
-<div class=\"card-container\">
-\t{% for aboutus in aboutUs %}
-\t\t<div class=\"card-about-us\">
-\t\t\t<a href=\"#{{ aboutus.titre }}\" class=\"disable-link\">
-\t\t\t\t<h2>{{ aboutus.titre }}</h2>
-\t\t\t\t<div class=\"about-us-p\">{{ aboutus.contenu|raw }}</div>
-\t\t\t</a>
-\t\t</div>
-
-
-\t{% endfor %}
-
-
-</div>
-{% for aboutus in aboutUs %}
-\t{% if loop.index % 2 == 1 %}
-\t\t<div class=\"section\" id=\"{{ aboutus.titre }}\">
-\t\t\t<h2 class=\"about-us-title \">{{ aboutus.titre }}</h2>
-\t\t\t<div class=\"flex-container\">
-\t\t\t\t<div class=\"flex-item text-content class padding-right\">
-\t\t\t\t\t<div class=\"text-width\">
-\t\t\t\t\t\t<p>{{ aboutus.contenu|raw }}</p>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t\t<div class=\"flex-item\">
-\t\t\t\t\t<img src=\"{{ asset('upload/' ~ aboutus.image) }}\" alt=\"Notre Histoire\" class=\"image-about\">
-\t\t\t\t</div>
-\t\t\t</div>
-\t\t</div>
-
-\t{% endif %}
-\t{% if loop.index % 2 == 0 %}
-\t\t<!-- Que faisons-nous ? -->
-\t\t<div class=\"section\" id=\"{{ aboutus.titre }}\">
-\t\t\t<h2 class=\"about-us-title animate__animated animate__backInRight \" id=\"what-do-we-do\">{{ aboutus.titre }}</h2>
-\t\t\t<div class=\"flex-container\">
-\t\t\t\t<div class=\"flex-item\">
-\t\t\t\t\t<img src=\"{{ asset('upload/' ~ aboutus.image) }}\" alt=\"Notre Histoire\" class=\"image-about\">
-\t\t\t\t</div>
-\t\t\t\t<div class=\"flex-item text-content class padding-right\">
-\t\t\t\t\t<div class=\"text-width\">
-\t\t\t\t\t\t<p class=\"text-width\">{{ aboutus.contenu|raw }}</p>
-\t\t\t\t\t</div>
-
-\t\t\t\t</div>
-\t\t\t</div>
-\t\t</div>
-
-\t{% endif %}
-
-{% endfor %}{% endblock %}
+</script>{% endblock %}
 ", "about-us/index.html.twig", "/Users/dvpt/Desktop/ong2/templates/about-us/index.html.twig");
     }
 }

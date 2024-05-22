@@ -32,7 +32,7 @@ class ActionController extends AbstractController
     }
 
     # CREATE
-    #[Route("/new", name:"new_action")]
+    #[Route("/new_action", name:"new_action")]
     public function new_action(Request $request , EntityManagerInterface $em){ 
         $action= new Action(); 
         $form = $this->createForm(actionType::class , $action); 

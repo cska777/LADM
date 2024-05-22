@@ -87,16 +87,16 @@ class __TwigTemplate_2d5005803bf58efd64f0e217322327e5 extends Template
                 yield "\" id=\"bouton-don\" class=\"btn btn-warning btn-lg\">FAIRE UN DON</a>
                     ";
             } elseif ((CoreExtension::getAttribute($this->env, $this->source,             // line 10
-$context["newz"], "type", [], "any", false, false, false, 10) == "article")) {
+$context["newz"], "type", [], "any", false, false, false, 10) == "Article")) {
                 // line 11
                 yield "                        <a href=\"";
                 yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("actualites");
                 yield "\" id=\"bouton-act\" class=\"btn btn-primary btn-lg\">VOIR LES ACTUALITES</a>
                     ";
             } elseif ((CoreExtension::getAttribute($this->env, $this->source,             // line 12
-$context["newz"], "type", [], "any", false, false, false, 12) == "autre")) {
+$context["newz"], "type", [], "any", false, false, false, 12) == "Action")) {
                 // line 13
-                yield "                        <a href=\"#\" id=\"bouton-autre\" class=\"btn btn-secondary btn-lg\">AUTRE ACTION</a>
+                yield "                        <a href=\"#\" id=\"bouton-action\" class=\"btn btn-success btn-lg\">AUTRE ACTION</a>
                     ";
             }
             // line 15
@@ -172,10 +172,10 @@ $context["newz"], "type", [], "any", false, false, false, 12) == "autre")) {
                     <h4 class=\"text\" style=\"white-space: pre-line;\">{{ newz.contenu|raw }}</h4>
                     {% if newz.type == 'Don' %}
                         <a href=\"{{ path(\"app_don\") }}\" id=\"bouton-don\" class=\"btn btn-warning btn-lg\">FAIRE UN DON</a>
-                    {% elseif newz.type == 'article' %}
+                    {% elseif newz.type == 'Article' %}
                         <a href=\"{{ path(\"actualites\")}}\" id=\"bouton-act\" class=\"btn btn-primary btn-lg\">VOIR LES ACTUALITES</a>
-                    {% elseif newz.type == 'autre' %}
-                        <a href=\"#\" id=\"bouton-autre\" class=\"btn btn-secondary btn-lg\">AUTRE ACTION</a>
+                    {% elseif newz.type == 'Action' %}
+                        <a href=\"#\" id=\"bouton-action\" class=\"btn btn-success btn-lg\">AUTRE ACTION</a>
                     {% endif %}
                 </div>
             </div>

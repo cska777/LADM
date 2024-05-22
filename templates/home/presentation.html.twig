@@ -1,21 +1,21 @@
 <section id="presentation">
-	{% for aboutUs in aboutUsImage %}
+    {% for apropos in aboutUs|slice(0, 2) %}
 
-		<div id="left-side">
-			<img src="{{ asset('upload/' ~ aboutUs.image) }}" alt="" id="img-presentation">
-		</div>
-	{% endfor %}
+        <div id="left-side">
+            <img src="{{ asset('upload/' ~ apropos.image) }}" alt="" id="img-presentation">
+        </div>
 
-	<div id="right-side">
-		{% for aboutus in aboutUs %}
-			<h3>
-				{{ aboutus.titre }}
-			</h3>
-			<p class="about-us-presentation">
-				{{ aboutus.contenu|striptags|raw }}</p>
-			<hr>
-		{% endfor %}
 
-		<a class="btn btn-primary " href="{{ path('about_us')}}">en savoir plus...</a>
-	</div>
+        <div id="right-side">
+            <h3>
+                {{ apropos.titre }}
+            </h3>
+            <p class="about-us-presentation">
+                {{ apropos.contenu|striptags|raw }}</p>
+            <hr>
+
+
+        </div>
+    {% endfor %}
 </section>
+

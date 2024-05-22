@@ -230,17 +230,22 @@ class __TwigTemplate_2a81aef1ddcebea946b1070d418f3cd3 extends Template
             yield "\t\t\t\t\t";
             yield from             $this->loadTemplate("article/tabBord.html.twig", "user/index.html.twig", 108)->unwrap()->yield($context);
             // line 109
-            yield "\t\t\t\t\t";
-            yield from             $this->loadTemplate("action/tabBord.html.twig", "user/index.html.twig", 109)->unwrap()->yield($context);
+            yield "\t\t\t\t\t<hr>
+\t\t\t\t\t";
             // line 110
-            yield "\t\t\t\t\t";
-            yield from             $this->loadTemplate("about-us/tabBord.html.twig", "user/index.html.twig", 110)->unwrap()->yield($context);
+            yield from             $this->loadTemplate("action/tabBord.html.twig", "user/index.html.twig", 110)->unwrap()->yield($context);
             // line 111
-            yield "
+            yield "\t\t\t\t\t<hr>
+\t\t\t\t\t";
+            // line 112
+            yield from             $this->loadTemplate("about-us/tabBord.html.twig", "user/index.html.twig", 112)->unwrap()->yield($context);
+            // line 113
+            yield "\t\t\t\t\t<hr>
+
 
 \t\t\t\t";
         }
-        // line 114
+        // line 117
         yield "\t\t\t\t<section class='don'>
 \t\t\t\t\t<h2 class=\"my-3 text-center text-uppercase\">Gerer les Dons</h2>
 \t\t\t\t\t<div class=\"adTable table-responsive-sm d-flex justify-content-center\">
@@ -272,7 +277,7 @@ event.preventDefault();
 
 const type = this.dataset.type;
 const form = document.querySelector('form[action=\"  ";
-        // line 144
+        // line 147
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_search");
         yield "\"]');
 const input = document.createElement('input');
@@ -317,7 +322,7 @@ form.submit();
      */
     public function getDebugInfo()
     {
-        return array (  276 => 144,  244 => 114,  239 => 111,  236 => 110,  233 => 109,  230 => 108,  227 => 107,  224 => 106,  221 => 105,  218 => 104,  216 => 103,  205 => 95,  185 => 77,  162 => 56,  159 => 55,  126 => 25,  123 => 24,  121 => 23,  108 => 12,  99 => 9,  96 => 8,  91 => 7,  81 => 6,  60 => 3,  37 => 1,);
+        return array (  281 => 147,  249 => 117,  243 => 113,  241 => 112,  238 => 111,  236 => 110,  233 => 109,  230 => 108,  227 => 107,  224 => 106,  221 => 105,  218 => 104,  216 => 103,  205 => 95,  185 => 77,  162 => 56,  159 => 55,  126 => 25,  123 => 24,  121 => 23,  108 => 12,  99 => 9,  96 => 8,  91 => 7,  81 => 6,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -430,8 +435,11 @@ form.submit();
 \t\t\t\t{% endif %}
 \t\t\t\t{% if is_granted('ROLE_S_AD') or is_granted('ROLE_ADMIN') %}
 \t\t\t\t\t{% include 'article/tabBord.html.twig'  %}
+\t\t\t\t\t<hr>
 \t\t\t\t\t{% include 'action/tabBord.html.twig'  %}
+\t\t\t\t\t<hr>
 \t\t\t\t\t{% include 'about-us/tabBord.html.twig'  %}
+\t\t\t\t\t<hr>
 
 
 \t\t\t\t{% endif %}

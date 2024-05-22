@@ -42,58 +42,45 @@ class __TwigTemplate_e344fae663c77b56b5789cb0cba66c48 extends Template
 
         // line 1
         yield "<section id=\"presentation\">
-\t";
+    ";
         // line 2
         $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["aboutUsImage"]) || array_key_exists("aboutUsImage", $context) ? $context["aboutUsImage"] : (function () { throw new RuntimeError('Variable "aboutUsImage" does not exist.', 2, $this->source); })()));
-        foreach ($context['_seq'] as $context["_key"] => $context["aboutUs"]) {
+        $context['_seq'] = CoreExtension::ensureTraversable(Twig\Extension\CoreExtension::slice($this->env->getCharset(), (isset($context["aboutUs"]) || array_key_exists("aboutUs", $context) ? $context["aboutUs"] : (function () { throw new RuntimeError('Variable "aboutUs" does not exist.', 2, $this->source); })()), 0, 2));
+        foreach ($context['_seq'] as $context["_key"] => $context["apropos"]) {
             // line 3
             yield "
-\t\t<div id=\"left-side\">
-\t\t\t<img src=\"";
+        <div id=\"left-side\">
+            <img src=\"";
             // line 5
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("upload/" . CoreExtension::getAttribute($this->env, $this->source, $context["aboutUs"], "image", [], "any", false, false, false, 5))), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("upload/" . CoreExtension::getAttribute($this->env, $this->source, $context["apropos"], "image", [], "any", false, false, false, 5))), "html", null, true);
             yield "\" alt=\"\" id=\"img-presentation\">
-\t\t</div>
-\t";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['aboutUs'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 8
-        yield "
-\t<div id=\"right-side\">
-\t\t";
-        // line 10
-        $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["aboutUs"]) || array_key_exists("aboutUs", $context) ? $context["aboutUs"] : (function () { throw new RuntimeError('Variable "aboutUs" does not exist.', 10, $this->source); })()));
-        foreach ($context['_seq'] as $context["_key"] => $context["aboutus"]) {
+        </div>
+
+
+        <div id=\"right-side\">
+            <h3>
+                ";
             // line 11
-            yield "\t\t\t<h3>
-\t\t\t\t";
-            // line 12
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["aboutus"], "titre", [], "any", false, false, false, 12), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["apropos"], "titre", [], "any", false, false, false, 11), "html", null, true);
             yield "
-\t\t\t</h3>
-\t\t\t<p class=\"about-us-presentation\">
-\t\t\t\t";
-            // line 15
-            yield Twig\Extension\CoreExtension::striptags(CoreExtension::getAttribute($this->env, $this->source, $context["aboutus"], "contenu", [], "any", false, false, false, 15));
+            </h3>
+            <p class=\"about-us-presentation\">
+                ";
+            // line 14
+            yield Twig\Extension\CoreExtension::striptags(CoreExtension::getAttribute($this->env, $this->source, $context["apropos"], "contenu", [], "any", false, false, false, 14));
             yield "</p>
-\t\t\t<hr>
-\t\t";
+            <hr>
+
+
+        </div>
+    ";
         }
         $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['aboutus'], $context['_parent'], $context['loop']);
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['apropos'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 18
-        yield "
-\t\t<a class=\"btn btn-primary \" href=\"";
-        // line 19
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("about_us");
-        yield "\">en savoir plus...</a>
-\t</div>
-</section>
+        // line 20
+        yield "</section>
+
 ";
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
@@ -125,32 +112,32 @@ class __TwigTemplate_e344fae663c77b56b5789cb0cba66c48 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  93 => 19,  90 => 18,  81 => 15,  75 => 12,  72 => 11,  68 => 10,  64 => 8,  55 => 5,  51 => 3,  47 => 2,  44 => 1,);
+        return array (  82 => 20,  70 => 14,  64 => 11,  55 => 5,  51 => 3,  47 => 2,  44 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<section id=\"presentation\">
-\t{% for aboutUs in aboutUsImage %}
+    {% for apropos in aboutUs|slice(0, 2) %}
 
-\t\t<div id=\"left-side\">
-\t\t\t<img src=\"{{ asset('upload/' ~ aboutUs.image) }}\" alt=\"\" id=\"img-presentation\">
-\t\t</div>
-\t{% endfor %}
+        <div id=\"left-side\">
+            <img src=\"{{ asset('upload/' ~ apropos.image) }}\" alt=\"\" id=\"img-presentation\">
+        </div>
 
-\t<div id=\"right-side\">
-\t\t{% for aboutus in aboutUs %}
-\t\t\t<h3>
-\t\t\t\t{{ aboutus.titre }}
-\t\t\t</h3>
-\t\t\t<p class=\"about-us-presentation\">
-\t\t\t\t{{ aboutus.contenu|striptags|raw }}</p>
-\t\t\t<hr>
-\t\t{% endfor %}
 
-\t\t<a class=\"btn btn-primary \" href=\"{{ path('about_us')}}\">en savoir plus...</a>
-\t</div>
+        <div id=\"right-side\">
+            <h3>
+                {{ apropos.titre }}
+            </h3>
+            <p class=\"about-us-presentation\">
+                {{ apropos.contenu|striptags|raw }}</p>
+            <hr>
+
+
+        </div>
+    {% endfor %}
 </section>
+
 ", "home/presentation.html.twig", "/Users/dvpt/Desktop/ong2/templates/home/presentation.html.twig");
     }
 }

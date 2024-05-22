@@ -50,6 +50,10 @@
 	width: 100%;
 }
 
+.btnSavoirPlus{
+	width: 60%;
+	margin-left: 20%;
+}
 /* Conteneur de la Map. Cette map interactive a été temporairement remplacée par une capture d'écran. */
 .map-container {
 	text-align: center;
@@ -142,6 +146,7 @@ iframe {
 	background-color: white !important;
 	color: #0084c7 !important;
 }
+
 
 /*  Voici le style concernant la div "Actualités" */
 
