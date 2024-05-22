@@ -43,6 +43,7 @@ class ArticleController extends AbstractController
 
     
 
+
     #[Route("article/new", name: "new_article")]
     public function new_article(Request $request, EntityManagerInterface $em, SluggerInterface $slugger): Response
     {
@@ -82,6 +83,7 @@ class ArticleController extends AbstractController
 
         return $this->render("article/new_article.html.twig", $data);
     }
+
 
     #[Route("article/update/{id}", name: "update_article")]
     public function update(int $id, ArticleRepository $articleRepository, Request $request, EntityManagerInterface $em)

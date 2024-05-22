@@ -31,13 +31,6 @@ class AboutUsCrudController extends AbstractCrudController
         return [
             DateField::new('date', 'Ajouté le'),
             TextField::new('titre'),
-            ChoiceField::new('type')
-                ->setLabel('Type')
-                ->setChoices([
-                    'about-us-image' => 'about-us-image',
-                    'accueil-image' => 'accueil-image',
-                    'section' => 'section'
-                ]),
             ImageField::new('image', 'Image')
                 ->setBasePath('upload/')
                 ->setUploadDir('public/upload/')

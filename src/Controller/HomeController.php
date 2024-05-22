@@ -26,15 +26,13 @@ class HomeController extends AbstractController
         $newzs = $newzRepository->findAll();
         $articles = $articleRepository->findAll();
         $actions = $actionRepository->findAll();
-        $aboutUs = $aboutUsRepository->findBy(['type' => 'section']);;
-        $aboutUsImage = $aboutUsRepository->findBy(['type' => 'accueil-image']);;
+        $aboutUs = $aboutUsRepository->findAll();
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
             'newzs' => $newzs,
             'articles' => $articles,
             'actions' => $actions,
             'aboutUs' => $aboutUs,
-            'aboutUsImage' => $aboutUsImage,
             'isAdhesionPaye' => $this->getUser() ? $this->getUser()->getAdhesionPaye() : false,
 
         ]);
