@@ -7,23 +7,24 @@
 
 
 </head>
-	{% for apropos in aboutUs %}
-	<div class="banner" style="background-image: url('{{ asset('upload/' ~ apropos.image) }}');">
+
+	<div class="banner" style="background-image: url('{{ asset('upload/' ~ aboutUs[0].image) }}');">
 	</div>
 
 
 <div class="card-container">
+{% for apropos in aboutUs %}
 		<div class="card-about-us">
 			<a href="#{{ apropos.titre }}" class="disable-link">
 				<h2>{{ apropos.titre }}</h2>
 				<div class="about-us-p">{{ apropos.contenu|raw }}</div>
 			</a>
 		</div>
+{% endfor %}
 
 
 
-
-
+{% for apropos in aboutUs %}
 </div>
 	{% if loop.index % 2 == 1 %}
 		<div class="section" id="{{ apropos.titre }}">
