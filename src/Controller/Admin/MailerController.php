@@ -156,4 +156,4 @@ class MailerController extends AbstractController
 
         return $message;
     }
-}
+} 
