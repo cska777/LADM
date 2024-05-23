@@ -267,8 +267,7 @@ class UserType extends AbstractType
                 'attr' => [
                     'class' => 'planChoixForm'
                 ]
-            ]);
-            
+            ]);    
     }
     public function configureOptions(OptionsResolver $resolver): void
     {

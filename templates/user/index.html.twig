@@ -4,6 +4,22 @@
 {% endblock %}
 
 {% block body %}
+	{% if app.flashes('error') %}
+		<div class="alert alert-danger" role="alert">
+			{% for message in app.flashes('error') %}
+				{{ message }}
+			{% endfor %}
+		</div>
+{% for label, messages in app.flashes %}
+    <div class="alert alert-{{ label }}">
+        {% for message in messages %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    </div>
+{% endfor %}
+
+	{% endif %}
+
 	{% for message in app.flashes('success') %}
 		<div class="alert alert-success mt-4">
 			{{ message }}
@@ -59,7 +75,7 @@
 									<span class="ms-1 d-sm-inline">Articles</span>
 								</a>
 							</li>
-						</li>	
+						</li>
 					{% endif %}
 					<li>
 						<a href="#submenu3" class="nmenu nav-link px-0 align-middle">
@@ -129,7 +145,7 @@ element.addEventListener('click', function (event) {
 event.preventDefault();
 
 const type = this.dataset.type;
-const form = document.querySelector('form[action="  {{ path('app_search') }}"]');
+const form = document.querySelector('form[action="       {{ path('app_search') }}"]');
 const input = document.createElement('input');
 // const input = form.querySelector('input[name="type"]');
 

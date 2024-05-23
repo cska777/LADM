@@ -56,6 +56,13 @@ class AboutUsController extends AbstractController
         $form = $this->createForm(AboutType::class, $about_us);
         $data["form"] = $form;
         $form->handleRequest($request);
+        
+        $nbAboutUs = $em->getRepository(AboutUs::class)->count([]);
+        if($nbAboutUs >= 3){
+            $this->addFlash("danger", "Vous ne pouvez pas créer plus de 3 éléments dans la section À propos. Veuillez supprimer ou modifier un des éléments.");
+
+            return $this->redirectToRoute("app_user_index");
+        }
 
         if($form->isSubmitted()&& $form->isValid()){
             $imageFile = $form->get('image')->getData();
