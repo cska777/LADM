@@ -33,8 +33,6 @@
 									<span class="ms-1 d-sm-inline">Membres</span>
 								</a>
 							</li>
-						{% endif %}
-						{% if is_granted('ROLE_S_AD') or is_granted('ROLE_ADMIN') %}
 							<li>
 								<a href="#submenu" class="nmenu nav-link px-0 align-middle ">
 									<i class="fa-regular fa-images"></i>
@@ -53,6 +51,8 @@
 									<span class="ms-1 d-sm-inline">Actions</span>
 								</a>
 							</li>
+						{% endif %}
+						{% if is_granted('ROLE_S_AD') or is_granted('ROLE_ADMIN') %}
 							<li>
 								<a href="#submenu3" class="nmenu nav-link px-0 align-middle ">
 									<i class="fa-solid fa-newspaper"></i>
@@ -90,16 +90,14 @@
 				{% if is_granted('ROLE_S_AD') %}
 					{% include 'user/tabBord.html.twig'%}
 					{% include 'newz/index.html.twig'  %}
-				{% endif %}
-				{% if is_granted('ROLE_S_AD') or is_granted('ROLE_ADMIN') %}
-					{% include 'article/tabBord.html.twig'  %}
-					<hr>
 					{% include 'action/tabBord.html.twig'  %}
 					<hr>
 					{% include 'about-us/tabBord.html.twig'  %}
 					<hr>
-
-
+				{% endif %}
+				{% if is_granted('ROLE_S_AD') or is_granted('ROLE_ADMIN') %}
+					{% include 'article/tabBord.html.twig'  %}
+					<hr>
 				{% endif %}
 				<section class='don'>
 					<h2 class="my-3 text-center text-uppercase">Gerer les Dons</h2>
