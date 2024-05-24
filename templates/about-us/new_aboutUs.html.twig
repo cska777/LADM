@@ -7,10 +7,12 @@
     <div class="articleForm d-flex justify-content-center">
         <div class="w-75">
         {{ form_start(form) }}
-            <div>{{form_row(form.titre)}}</div>
-            <div>{{form_row(form.contenu)}}</div>
+            {{form_row(form.titre)}}
+            {{form_row(form.contenu)}}
             Ajouter une image <br>
-            <div>{{form_row(form.image)}}</div>
+            {{form_row(form.image)}}
+            {{form_row(form.auteur)}}
+            {{form_row(form.date)}}
 
         <div class="submit-button text-center" >
         {{ form_end(form) }}

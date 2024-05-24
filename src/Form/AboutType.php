@@ -25,6 +25,9 @@ class AboutType extends AbstractType
                 "label" => false,
                 "required" => true,
                 "data_class" => null,
+                "attr" => [
+                    "class" => "mb-3"
+                ]
             ])
             ->add("auteur")
             ->add("date", null, [
