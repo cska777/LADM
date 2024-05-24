@@ -163,6 +163,15 @@
 }
 
 /* Gestion des styles des formulaires */
+.prenom,
+.juri{
+    width: 100%;
+    margin-left: 1px;
+}
+
+.civil{
+    width: 25%;
+}
 
 #persPhysique {
     width: 75%;
@@ -178,7 +187,6 @@
     margin-left: 20%;
 }
 
-
 #formPersPhy input{
     margin-bottom: 3%;
     height: 40px;
@@ -189,7 +197,6 @@
     width: 100%;
 }
 
-
 #formPersPhy input::placeholder{
     color: rgb(163, 163, 163);
 }
@@ -198,7 +205,6 @@
     border: 3px solid #1D3E56;
     outline: none;
 }
-
 
 .civiliteSelect, #user_plan {
     height: 40px;
@@ -516,6 +522,10 @@
         width: 80%;
         padding-top: 2%;
         margin-left: 10%;
+    }
+
+    #adh{
+        width: 100% !important;
     }
 
     #formPersPhy{

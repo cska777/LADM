@@ -4,17 +4,17 @@
 
 {% block body %}
 <section id='sectionAdhesion' style="margin-top:8%">
-	<div class="container w-75">
+	<div class="container w-75" id="adh">
         
         <div id="formPersPhy">
         <h1 class="text-center mb-0">Inscription</h1>
             {{ form_start(form) }}
             {{ form_row(form.type) }}
             <div class="d-flex civiliteSelectDiv" style="">
-                <div class='w-25'>
+                <div class=''>
                     {{ form_row(form.civilite) }}
                 </div>
-                <div class='w-100 ms-5'>
+                <div class='prenom'>
                     {{ form_row(form.prenom) }}
                 </div>
             </div>
@@ -22,7 +22,7 @@
                 <div class='w-100'>
                     {{ form_row(form.siren) }}
                 </div>
-                <div class='w-100 ms-5'>
+                <div class='w-100'>
                     {{ form_row(form.formeJuridique) }}
                 </div>
             </div>
@@ -35,7 +35,7 @@
             {{ form_row(form.ville) }}
             {{ form_row(form.pays) }}
             {{ form_row(form.password) }}
-            <button type="submit" class="btn btn-primary">S'inscrire</button>
+            <button type="submit" class="btn btn-primary my-3">S'inscrire</button>
             {{ form_end(form) }}
         </div>
 	</div>

@@ -35,7 +35,7 @@ class UserType extends AbstractType
                 ],
                 // 'mapped' => false,
                 'attr' => [
-                    'class' => 'civiliteSelect'],
+                    'class' => 'civiliteSelect mb-3'],
             ])
             ->add('nom', TextType::class, [
                 'label' => false,
@@ -192,7 +192,7 @@ class UserType extends AbstractType
                 'validation_groups' => ['adherent'],
                 'data' => 'Mr', 
                 'attr' => [
-                    'class' => 'form-control'
+                    'class' => 'civil form-control'
                 ],
                 'expanded' => false,
                 'multiple' => false,
@@ -207,7 +207,7 @@ class UserType extends AbstractType
                 'validation_groups' => ['adherent'],
                 'attr' => [
                     'placeholder' => 'Votre prénom *',
-                    'class' => 'form-control mb-3'
+                    'class' => 'prenom form-control mb-3'
                 ],
             ])
             ->add('siren', TextType::class, [
@@ -225,7 +225,7 @@ class UserType extends AbstractType
                 'validation_groups' => ['entreprise'],
                 'attr' => [
                     'placeholder' => 'Votre forme juridique *',
-                    'class' => 'form-control mb-3'
+                    'class' => 'juri form-control mb-3'
                 ],
             ])
             ->add('password', RepeatedType::class, [
