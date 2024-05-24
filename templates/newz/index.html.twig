@@ -30,10 +30,11 @@
                             <i class="visu2 fa-solid fa-pen-to-square"></i>
                         </a>
                         </form>
-                        <form>
-                        <a class="btn btn-danger py-1 px-2" href="{{ path('app_newz_delete', {'id': newz.id}) }}">
-                            <i class="fa-solid fa-trash"></i>
-                        </a>
+                        <form method="post" action="{{ path('app_newz_delete', {'id': newz.id}) }}" onsubmit="return confirm('Êtes-vous sur de vouloir supprimer ?');">
+                            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ newz.id) }}">
+                            <button type="submit" class=" btn btn-danger py-1 px-2">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
                         </form>
                     </div>
                     </td>

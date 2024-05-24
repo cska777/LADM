@@ -86,7 +86,7 @@ class ArticleController extends AbstractController
 
 
     #[Route("article/update/{id}", name: "update_article")]
-    public function update(int $id, ArticleRepository $articleRepository, Request $request, EntityManagerInterface $em)
+    public function update(int $id, ArticleRepository $articleRepository, Request $request, EntityManagerInterface $em, SluggerInterface $slugger)
     {
         $article = $articleRepository->findOneBy(["id" => $id]);
         $form = $this->createForm(ArticleType::class, $article, ["label" => "modifier"]);

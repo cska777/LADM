@@ -26,12 +26,29 @@
 
 .titreh1 {
     font-size: 30px;
-    color: #032B43;
+    color: #032B43; 
+}
+
+.articlesForm{
+    width: 75%;
+}
+
+.sImg{
+    display: flex;
 }
 
 @media only screen and (max-width: 768px) {
     .titreh1 {
         font-size: 20px; 
+    }
+    .articleForm,
+    .articlesForm{
+        width: 100% !important;
+    }
+    .sImg{
+        display:list-item;
+        list-style-type: none;
+        margin-bottom: 10px;
     }
 }
 

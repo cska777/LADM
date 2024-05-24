@@ -21,17 +21,21 @@
                     </td>
                     <td>{{ action.titre }}</td>
                     <td class="ico">
+                    <div class="icone">
+                        <form>
                         <a class="btn btn-success py-1 px-2" href="{{path("update_action", {id: action.id})}}">
                             <i class="visu2 fa-solid fa-pen-to-square"></i>
                         </a>
+                        </form>
                         {% if is_granted('ROLE_S_AD') %}
-                        <a class="btn btn-primary py-1 px-2" href="{{path("new_action")}}">
-                            <i class="fa-solid fa-square-plus"></i>
-                        </a>
-                        <a class="btn btn-danger py-1 px-2" href="{{path("delete_action", {id: action.id})}}">
-                            <i class="fa-solid fa-trash"></i>
-                        </a>
+                        <form method="post" action="{{path("delete_action", {id: action.id})}}" onsubmit="return confirm('Êtes-vous sur de vouloir supprimer ?');">
+                            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ action.id) }}">
+                            <button type="submit" class=" btn btn-danger py-1 px-2">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </form>
                         {% endif %}
+                    </div>
                     </td>
                 </tr>
             {% else %}

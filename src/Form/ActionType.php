@@ -14,12 +14,7 @@ class ActionType extends AbstractType
     {
         $builder
             ->add('titre')
-            ->add('description')
-            ->add('creer', SubmitType::class, [
-                'label' => isset($options["label"]) ? $options["label"] : "Ajouter",
-                'attr' => ['class' => 'btn btn-outline-success mt-3']
-            ])
-        ;
+            ->add('description');
     }
 
     public function configureOptions(OptionsResolver $resolver): void

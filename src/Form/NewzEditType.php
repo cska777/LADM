@@ -37,12 +37,15 @@ class NewzEditType extends AbstractType
             'required' => false,
             'multiple' => false,
             'attr' => [
-                'class' => 'civiliteSelect'
+                'class' => ' civiliteSelect'
             ],
             ])
             ->add('titre', TextType::class, [
                 'label' => 'Titre',
                 'required' => false,
+                'attr' => [
+                    'class' => 'nType civiliteSelect'
+                ],
                 ])
             ->add('contenu', TextareaType::class, [
                 'attr' => [

@@ -55,7 +55,7 @@ class NewzController extends AbstractController
             $entityManager->persist($newz);
             $entityManager->flush();
 
-            return $this->redirectToRoute('app_newz_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('app_user_index', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->render('newz/new.html.twig', [
@@ -116,7 +116,7 @@ class NewzController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('app_newz_index', [], Response::HTTP_SEE_OTHER);
+        return $this->redirectToRoute('app_user_index', [], Response::HTTP_SEE_OTHER);
     }
    
 }

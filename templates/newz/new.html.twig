@@ -3,11 +3,11 @@
 {% block title %}Ajoutez un carousel{% endblock %}
 
 {% block body %}
-<section id='sectionAdhesion' style="margin-top:8%">
-	<div class="container w-75">
+<section id='sectionCar' style="margin-top:8%">
+	<div class="cCarousel container">
         
         <div id="formPersPhy">
-        <h1>Créer un carousel</h1>
+        <h1 class="cTitre text-center">Créer un carousel</h1>
             {{ form_start(form) }}
                 {{ form_row(form.type) }}
             <div class="d-flex civiliteSelectDiv" style="">
@@ -19,7 +19,7 @@
             {{ form_row(form.image) }}
             {{ form_row(form.contenu) }}
             <div class="my-3 d-flex justify-content-around">
-            <button type="submit" class="btn btn-primary">Créer votre article</button>
+            <button type="submit" class="btn btn-primary">Créer le carousel</button>
             <a class="btn btn-primary" href="{{ path('app_user_index') }}">Retour</a>
             </div>
             {{ form_end(form) }}

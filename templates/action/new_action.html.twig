@@ -4,15 +4,17 @@
 
     <h1 class="titre_new text-center">Ajouter une action</h1>
     
-    <div class="articleForm d-flex justify-content-center">
-        <div class="w-75">
+    <div class="articleForm">
+        <div class="actionForm container">
         {{ form_start(form) }}
             <div>{{form_row(form.titre)}}</div>
             <div>{{form_row(form.description)}}</div>
            
 
-        <div class="submit-button text-center" >
+        <div class="d-flex justify-content-around" >
+        <button type="submit" class="btn btn-primary">Ajouter</button>
         {{ form_end(form) }}
+        <a class="btn btn-primary" href="{{ path('app_user_index') }}">Retour</a>
         </div>   
         </div>          
     </div> 

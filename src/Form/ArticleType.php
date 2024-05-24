@@ -47,10 +47,6 @@ class ArticleType extends AbstractType
                     'class' => 'form-control',
                 ),
             ])
-            ->add('creer', SubmitType::class, [
-                'label' => isset($options["label"]) ? $options["label"] : "Ajouter",
-                'attr' => ['class' => 'btn btn-outline-success mt-3']
-            ]);
         ;
     }
 
