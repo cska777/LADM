@@ -107,13 +107,10 @@
 					{% include 'user/tabBord.html.twig'%}
 					{% include 'newz/index.html.twig'  %}
 					{% include 'action/tabBord.html.twig'  %}
-					<hr>
 					{% include 'about-us/tabBord.html.twig'  %}
-					<hr>
 				{% endif %}
 				{% if is_granted('ROLE_S_AD') or is_granted('ROLE_ADMIN') %}
 					{% include 'article/tabBord.html.twig'  %}
-					<hr>
 				{% endif %}
 				<section class='don'>
 					<h2 class="my-3 text-center text-uppercase">Gerer les Dons</h2>
@@ -123,7 +120,7 @@
 							En attente du CRUD
 						</h3>
 					</div>
-					<hr>
+					{# <hr> #}
 				</section>
 				<section class='cot'>
 					<h2 class="my-3 text-center text-uppercase">Gerer les Cotisations</h2>
@@ -133,12 +130,13 @@
 							En attente du CRUD
 						</h3>
 					</div>
-					<hr>
+					{# <hr> #}
 				</section>
 			</section>
 		</div>
 	</div>
 </div>
+<hr>
 <script>
 	document.querySelectorAll('.filter-type').forEach(function (element) {
 element.addEventListener('click', function (event) {
